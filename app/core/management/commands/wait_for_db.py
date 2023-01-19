@@ -1,12 +1,13 @@
 '''
 Django command to wait for the pgsql database to be ready
 '''
-import time 
+import time
 
 from psycopg2 import OperationalError as Psycopg2OpError
 
 from django.db.utils import OperationalError
 from django.core.management.base import BaseCommand
+
 
 class Command(BaseCommand):
     ''' Django command to wait for database to be ready'''
